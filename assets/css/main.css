@@ -1,12 +1,6 @@
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic");
 
-/*
-	Photon by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 html,
 body,
 div,
@@ -2154,6 +2148,16 @@ header.special {
   text-align: center;
 }
 
+.buttonsHeader {
+  display: grid;
+  justify-content: center;
+  gap: 15px;
+}
+
+.buttonsHeader a {
+  width: 18rem;
+}
+
 /* Form */
 
 form {
@@ -2510,9 +2514,9 @@ ul {
   padding-left: 1em;
 }
 
-ul li {
+/* ul li {
   padding-left: 0.5em;
-}
+} */
 
 ul.alt {
   list-style: none;
@@ -2546,10 +2550,10 @@ ul.actions {
   padding-left: 0;
 }
 
-ul.actions li {
+/* ul.actions li {
   padding: 0 0 0 1em;
   vertical-align: middle;
-}
+} */
 
 ul.actions.special {
   -moz-justify-content: center;
@@ -2560,9 +2564,9 @@ ul.actions.special {
   margin-left: 0;
 }
 
-ul.actions.special li:first-child {
+/* ul.actions.special li:first-child {
   padding-left: 0;
-}
+} */
 
 ul.actions.stacked {
   -moz-flex-direction: column;
@@ -3135,9 +3139,9 @@ header .actions {
   position: relative;
 }
 
-header .actions li:first-child {
+/* header .actions li:first-child {
   padding-left: 0;
-}
+} */
 
 header .actions:after {
   background: #ffffff;
@@ -3216,6 +3220,14 @@ body.is-preload header .inner .actions {
 
 body.is-preload header:after {
   opacity: 1;
+}
+
+.photoIntro {
+  margin-top: 2rem;
+}
+
+.portrait {
+  width: 15%;
 }
 
 /* Footer */
@@ -3359,7 +3371,7 @@ footer .copyright li:first-child {
   /* Header */
 
   header {
-    padding: 6em 0 6em 0;
+    padding: 2em 0 6em 0;
   }
 }
 
@@ -3449,7 +3461,7 @@ footer .copyright li:first-child {
   /* Header */
 
   header {
-    padding: 8em 3em 8em 3em;
+    padding: 2em 3em 2em 3em;
   }
 
   /* Footer */
