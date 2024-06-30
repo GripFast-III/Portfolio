@@ -1811,6 +1811,8 @@ pre code {
   .row.gtr-150 {
     margin-top: 0;
     margin-left: -3em;
+    display: flex;
+    flex-direction: column-reverse;
   }
 
   .row.gtr-150 > * {
@@ -2392,9 +2394,9 @@ input[type="radio"] + label:before {
   line-height: inherit;
 }
 
-.icon.solid:before {
+/* .icon.solid:before {
   font-weight: 900 !important;
-}
+} */
 
 .icon.brands:before {
   font-family: "Font Awesome 5 Brands";
@@ -2442,7 +2444,7 @@ input[type="radio"] + label:before {
   line-height: 1;
   text-transform: none !important;
   font-family: "Font Awesome 5 Free";
-  font-weight: 400;
+  font-weight: 900;
 }
 
 .icon.major:before {
@@ -2487,13 +2489,16 @@ input[type="radio"] + label:before {
 }
 
 .image.fit {
-  display: block;
-  margin: 0 0 2em 0;
+  display: flex;
+  justify-content: center;
+  margin: 0 0 1em 0;
   width: 100%;
 }
 
 .image.fit img {
-  width: 100%;
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
 }
 
 /* List */
@@ -2512,6 +2517,10 @@ ul {
   list-style: disc;
   margin: 0 0 2em 0;
   padding-left: 1em;
+}
+
+.taskList li {
+  text-align: left;
 }
 
 /* ul li {
@@ -3134,7 +3143,7 @@ header .actions {
   -webkit-justify-content: center;
   -ms-justify-content: center;
   justify-content: center;
-  margin-top: 2.5em;
+  margin-top: 0.5em;
   margin-left: 0;
   position: relative;
 }
