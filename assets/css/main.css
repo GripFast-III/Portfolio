@@ -870,6 +870,8 @@ pre code {
   }
 
   .row.gtr-150 {
+    display: flex;
+    justify-content: center;
     margin-top: 0;
     margin-left: -3em;
   }
