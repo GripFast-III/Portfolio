@@ -220,7 +220,19 @@ i {
   font-style: italic;
 }
 
+.texte-descriptif {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25%;
+}
+
+.texte-descriptif p {
+  text-align: justify;
+  margin: 0 0 10em 0;
+}
+
 p {
+  text-align: justify;
   margin: 0 0 2em 0;
 }
 
@@ -373,9 +385,30 @@ pre code {
 }
 
 @media screen and (max-width: 980px) {
+  body {
+    width: 95%;
+    margin: auto;
+  }
+
+  #one,
+  #two,
+  #three,
+  #four {
+    padding: 0em 0em 1em 0em;
+  }
+
   .container {
-    max-width: 100% !important;
-    width: 100% !important;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .texte-descriptif {
+    margin-top: 0%;
+  }
+
+  .texte-descriptif p {
+    text-align: justify;
+    margin: 0 0 2em 0;
   }
 }
 
@@ -579,7 +612,7 @@ pre code {
 
 .row {
   margin-top: 0;
-  margin-left: -2em;
+  /* margin-left: -2em; */
 }
 
 .row > * {
@@ -1325,6 +1358,8 @@ pre code {
   .row.gtr-150 {
     margin-top: 0;
     margin-left: -3em;
+    display: flex;
+    flex-direction: column-reverse;
   }
 
   .row.gtr-150 > * {
@@ -2090,13 +2125,24 @@ pre code {
 
 /* Section/Article */
 
+#one,
+#two,
+#three,
+#four {
+  padding: 4em 0em 1em 0em;
+}
+
+#four ul .actions {
+  padding-top: 2em;
+  justify-content: space-evenly;
+}
+
 section.special,
 article.special {
   text-align: center;
 }
 
 header p {
-  color: #999;
   margin: 0 0 1.5em 0;
   position: relative;
 }
@@ -2131,7 +2177,7 @@ header.major:after {
   display: inline-block;
   height: 1px;
   margin-top: 1.5em;
-  width: 6em;
+  width: 0em;
 }
 
 header.major h2,
@@ -2144,6 +2190,11 @@ header.major h6 {
 
 header.major p {
   margin: 0.7em 0 0 0;
+}
+
+.major .citation {
+  font-style: italic;
+  display: contents;
 }
 
 header.special {
@@ -2496,7 +2547,7 @@ input[type="radio"] + label:before {
 }
 
 .image.fit img {
-  width: 300px;
+  width: 100%;
   height: 300px;
   object-fit: contain;
 }
@@ -2568,9 +2619,9 @@ ul.actions.special {
   -moz-justify-content: center;
   -webkit-justify-content: center;
   -ms-justify-content: center;
-  justify-content: center;
+  justify-content: space-evenly;
   width: 100%;
-  margin-left: 0;
+  margin: 3em 0em 2em 0em;
 }
 
 /* ul.actions.special li:first-child {
@@ -2690,6 +2741,9 @@ ul.icons li .icon:before {
 /* Major Icons */
 
 ul.major-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   list-style: none;
   padding-left: 0;
 }
@@ -2724,6 +2778,50 @@ ul.major-icons li .icon:before {
   line-height: inherit;
 }
 
+.fa-brands,
+.fa-solid {
+  font-size: 8rem;
+}
+
+.fa-html5 {
+  color: #da371e;
+}
+.fa-css3-alt {
+  color: #155ca7;
+}
+.fa-js {
+  color: #f0db4f;
+}
+.fa-react {
+  color: #54d2fa;
+}
+.fa-sass {
+  color: #bd4d88;
+}
+.fa-square-github {
+  color: #000000;
+}
+.fa-terminal {
+  color: #c0a592;
+}
+.fa-figma {
+  color: #ffffff;
+}
+
+.stars {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.fa-star {
+  font-size: 1em;
+  color: silver;
+}
+
+.greystar {
+  color: gray;
+}
 /* Table */
 
 .table-wrapper {
@@ -2807,7 +2905,7 @@ button,
   -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
   background-color: transparent;
-  border-radius: 4px;
+  border-radius: 25px;
   border: 0;
   box-shadow: inset 0 0 0 1px rgba(144, 144, 144, 0.5);
   color: #555 !important;
@@ -2924,10 +3022,6 @@ button:disabled,
 
 /* Main */
 
-.main {
-  padding: 6em 0 4em 0;
-}
-
 .main.style1 {
   background: #fff;
 }
@@ -3030,12 +3124,12 @@ button:disabled,
 /* Header */
 
 header {
-  padding: 9em 0 9em 0;
+  padding: 2em 0 2em 0;
   background-color: #4686a0;
   color: rgba(255, 255, 255, 0.75);
   background-attachment: fixed, fixed, fixed;
   background-image: url("images/overlay2.png"), url("images/overlay3.svg"),
-    linear-gradient(45deg, #9dc66b 5%, #4fa49a 30%, #4361c2);
+    linear-gradient(45deg, #9dc66b 5%, #4fa49a 30%, #4361c2); /* <--------- image à changer */
   background-position: top left, center center, center center;
   background-size: auto, cover, cover;
   overflow: hidden;
@@ -3242,7 +3336,7 @@ body.is-preload header:after {
 /* Footer */
 
 footer {
-  padding: 6em 0 6em 0;
+  padding: 2em 0 2em 0;
   background-color: #4686a0;
   color: rgba(255, 255, 255, 0.75);
   background-attachment: fixed, fixed, fixed;
@@ -3379,9 +3473,9 @@ footer .copyright li:first-child {
 
   /* Header */
 
-  header {
+  /* header {
     padding: 2em 0 6em 0;
-  }
+  } */
 }
 
 /* Large */
@@ -3502,6 +3596,8 @@ footer .copyright li:first-child {
   select,
   textarea {
     font-size: 12pt;
+    width: 95%;
+    margin: auto;
   }
 
   h1 {
